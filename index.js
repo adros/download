@@ -42,7 +42,7 @@ module.exports = (uri, output, opts) => {
 
 	opts = Object.assign({
 		encoding: null,
-		rejectUnauthorized: process.env.npm_config_strict_ssl !== 'false'
+		rejectUnauthorized: process.env.npm_config_strict_ssl === 'true'
 	}, opts);
 
 	let protocol = url.parse(uri).protocol;
